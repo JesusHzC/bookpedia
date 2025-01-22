@@ -5,7 +5,7 @@ import com.jesushz.bookpedia.book.domain.Book
 
 fun SearchedBookDto.toBook(): Book {
     return Book(
-        id = id,
+        id = id.substringAfterLast("/"),
         title = title,
         imageUrl = if (coverEditionKey != null)
             "https://covers.openlibrary.org/b/olid/${coverEditionKey}-L.jpg"
