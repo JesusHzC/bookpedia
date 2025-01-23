@@ -1,5 +1,8 @@
 package com.jesushz.bookpedia.di
 
+import androidx.sqlite.driver.bundled.BundledSQLiteDriver
+import com.jesushz.bookpedia.book.data.database.DatabaseFactory
+import com.jesushz.bookpedia.book.data.database.FavoriteBookDatabase
 import com.jesushz.bookpedia.book.data.network.KtorRemoteBooksDataSource
 import com.jesushz.bookpedia.book.data.network.RemoteBookDataSource
 import com.jesushz.bookpedia.book.data.repository.DefaultBookRepository
@@ -24,4 +27,15 @@ val sharedModule = module {
     viewModelOf(::BookListViewModel)
     viewModelOf(::SelectedBookViewModel)
     viewModelOf(::BookDetailViewModel)
+
+    single {
+        get<DatabaseFactory>()
+            .createDatabase()
+            .setDriver(BundledSQLiteDriver())
+            .build()
+
+    }
+    single {
+        get<FavoriteBookDatabase>().favoriteBookDao
+    }
 }
