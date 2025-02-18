@@ -22,6 +22,6 @@ Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-mu
 
 <p align="center">
   <img src="./screens/android.png" width="150">
-  <img src="./screens/desktop.png" width="400" height="500">
+  <img src="./screens/desktop.png" width="400" height="700">
   <img src="./screens/ios.png" width="150">
 </p>
