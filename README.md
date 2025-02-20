@@ -18,6 +18,15 @@ Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-mu
   ./gradlew run
 ```
 
+## Technologies Used
+
+- KMM (Kotlin Multiplatform)
+- Compose Multiplatform
+- Koin (Dependency Injection)
+- Room Multiplatform
+- Ktor 3.0
+- Material Design 3
+
 ## Screenshots
 
 <p align="center">
